@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { View, Text, FlatList, Button, Image, StyleSheet, ActivityIndicator, Alert } from "react-native";
-import { getContatos, deleteContato, Contato } from "../services/contatos";
+import { getContatos, deleteContato, Contato,  } from "../services/contatos";
 import { Link } from "expo-router";
 
 export default function HomeScreen() {
@@ -56,6 +56,10 @@ export default function HomeScreen() {
               <Link href={{ pathname: "/editar/[id]", params: { id: item._id } }}>
                 <Text style={{ color: "blue", marginTop: 5 }}>Editar</Text>
               </Link>
+              <Link href={{ pathname: "/detalhes/[id]", params: { id: item._id } }}>
+                <Text style={{ color: "white", marginTop: 5 }}>Detalhes</Text>
+              </Link>
+
             </View>
           </View>
         )}

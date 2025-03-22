@@ -29,3 +29,8 @@ export const updateContato = async(
   return await api.put(`/contatos/${id}`, contato);
 };
 
+export const getContatosById = async (id: string) => {
+  const response = await api.get(`/contatos/${id}`);
+  return response.data;
+}
+
