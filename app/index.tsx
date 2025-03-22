@@ -50,8 +50,7 @@ export default function HomeScreen() {
             )}
             <View style={styles.info}>
               <Text style={styles.nome}>{item.nome}</Text>
-              <Text>{item.email}</Text>
-              <Text>{item.telefone}</Text>
+                      <Text>{item.telefone}</Text>
               <Text>{item.endereco}</Text>
               <Button title="Excluir" onPress={() => handleDelete(item._id)} />
               <Link href={{ pathname: "/editar/[id]", params: { id: item._id } }}>
