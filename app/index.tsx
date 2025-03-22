@@ -54,6 +54,9 @@ export default function HomeScreen() {
               <Text>{item.telefone}</Text>
               <Text>{item.endereco}</Text>
               <Button title="Excluir" onPress={() => handleDelete(item._id)} />
+              <Link href={{ pathname: "/editar/[id]", params: { id: item._id } }}>
+                <Text style={{ color: "blue", marginTop: 5 }}>Editar</Text>
+              </Link>
             </View>
           </View>
         )}
